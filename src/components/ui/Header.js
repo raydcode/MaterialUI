@@ -117,7 +117,10 @@ const useStyles = makeStyles((theme) => ({
     zIndex: theme.zIndex.modal + 1,
   },
   tabSelected: {
-    "& .MuiListItem-root.Mui-selected": {
+    ...theme.typography.tab,
+    opacity: 1,
+    color: "white",
+    "&:hover": {
       opacity: 1,
     },
   },
@@ -265,8 +268,10 @@ export default function Header(props) {
             component={Link}
             to={option.link}
             classes={{
-              root: classes.menuItem,
-              selected: classes.tabSelected,
+              root:
+                index === selectedIndex && value === 1
+                  ? classes.tabSelected
+                  : classes.menuItem,
             }}
             onClick={(e) => {
               handleMenuItemClick(e, index);

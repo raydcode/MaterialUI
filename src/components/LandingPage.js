@@ -79,7 +79,7 @@ const useStyles = makeStyles((theme) => ({
   icon: {
     marginLeft: "2em",
     [theme.breakpoints.down("xs")]: {
-      marginLeft: 0,
+      marginLeft: "2em",
     },
   },
   servicesContainer: {
