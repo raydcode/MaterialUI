@@ -6,9 +6,8 @@ import { Grid, Button, Typography, Card, CardContent } from "@material-ui/core";
 import { useMediaQuery } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
-import ButtonArrow from "./ui/ButtonArrow";
 import Calltoaction from "./ui/CallToAction";
-
+import ButtonArrow from "./ui/ButtonArrow";
 import CustomSoftwareIcon from "./icons/CustomSoftwareIcon";
 import MobileIcon from "./icons/MobileIcon";
 import WebsiteIcon from "./icons/WebsiteIcon";
@@ -415,7 +414,11 @@ export default function LandingPage(props) {
                 }}
                 sm
               >
-                <Grid container style={{ marginBottom: matchesXs ? "10em":0}}direction="column">
+                <Grid
+                  container
+                  style={{ marginBottom: matchesXs ? "10em" : 0 }}
+                  direction="column"
+                >
                   <Typography variant="h2" style={{ color: "white" }}>
                     About Us
                   </Typography>

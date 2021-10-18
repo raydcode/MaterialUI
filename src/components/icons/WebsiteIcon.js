@@ -4,7 +4,7 @@ function WebsiteIcon(props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={240.511}
+      width={302.314}
       height={206.099}
       {...props}
     >

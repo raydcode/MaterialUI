@@ -82,6 +82,7 @@ const useStyles = makeStyles((theme) => ({
   menuItem: {
     ...theme.typography.tab,
     opacity: 0.7,
+    color: "white",
     "&:hover": {
       opacity: 1,
     },
@@ -114,6 +115,11 @@ const useStyles = makeStyles((theme) => ({
   },
   appBar: {
     zIndex: theme.zIndex.modal + 1,
+  },
+  tabSelected: {
+    "& .MuiListItem-root.Mui-selected": {
+      opacity: 1,
+    },
   },
 }));
 
@@ -258,7 +264,10 @@ export default function Header(props) {
             value={index}
             component={Link}
             to={option.link}
-            classes={{ root: classes.menuItem }}
+            classes={{
+              root: classes.menuItem,
+              selected: classes.tabSelected,
+            }}
             onClick={(e) => {
               handleMenuItemClick(e, index);
               setValue(1);
