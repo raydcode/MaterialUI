@@ -57,6 +57,11 @@ export default createTheme({
       fontSize: "1.25rem",
       fontWeight: 300,
     },
+    caption: {
+      fontSize:"1em",
+      fontWeight: 300,
+      color:textgrey,
+    },
     body1:{ fontSize: "1.25rem", fontWeight:300 , color:textgrey},
     learnButton: {
       borderColor: primaryColorVariant,
