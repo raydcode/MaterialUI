@@ -6,6 +6,7 @@ import ButtonArrow from "../ui/ButtonArrow";
 
 import background from "../../assets/background.jpg";
 import mobilebackground from "../../assets/mobileBackground.jpg";
+
 import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
@@ -41,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: "5em",
     marginLeft: "2em",
     "&:hover": {
-      backgroundColor: theme.palette.secondary.light,
+      backgroundColor: theme.palette.primary.main,
     },
     [theme.breakpoints.down("sm")]: {
       marginRight: 0,
@@ -59,7 +60,6 @@ export default function Calltoaction(props) {
   return (
     <Grid
       container
-      style={{}}
       alignItems="center"
       justify={matchesSm ? "center" : "space-between"}
       className={classes.background}

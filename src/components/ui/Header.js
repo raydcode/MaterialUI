@@ -14,7 +14,7 @@ import { IconButton, SwipeableDrawer } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import { List, ListItem, ListItemText } from "@material-ui/core";
 
-import logo from "../../assets/logo.svg";
+import logo from "../../assets/qclogo.svg";
 
 function ElevationScroll(props) {
   const { children } = props;

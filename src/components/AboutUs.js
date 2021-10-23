@@ -25,12 +25,12 @@ const useStyles = makeStyles((theme) => ({
   avatar: {
     height: "25em",
     width: "25em",
-    [theme.breakpoints.down("sm")]:{
+    [theme.breakpoints.down("sm")]: {
       height: "20em",
       width: "20em",
-      maxHeight:300,
-      maxWidth: 300
-    }
+      maxHeight: 300,
+      maxWidth: 300,
+    },
   },
 }));
 
@@ -38,14 +38,18 @@ export default function AboutUs(props) {
   const classes = useStyles();
   const theme = useTheme();
   const matchesMD = useMediaQuery(theme.breakpoints.down("md"));
-
-
   const { setValue } = props;
 
   return (
     <Grid container direction="column">
-      <Grid item className={classes.rowConatiner} style={{ marginTop: matchesMD ? "1em": "2em" }}>
-        <Typography variant="h2" align={matchesMD? "center": undefined}>About Us</Typography>
+      <Grid
+        item
+        className={classes.rowConatiner}
+        style={{ marginTop: matchesMD ? "1em" : "2em" }}
+      >
+        <Typography variant="h2" align={matchesMD ? "center" : undefined}>
+          About Us
+        </Typography>
       </Grid>
       <Grid
         item
@@ -134,7 +138,11 @@ export default function AboutUs(props) {
         </Grid>
         <Grid item>
           <Grid item container lg justify="center">
-            <img src={history} alt="History" style={{ maxHeight: matchesMD ?200: "22em" }} />
+            <img
+              src={history}
+              alt="History"
+              style={{ maxHeight: matchesMD ? 200 : "22em" }}
+            />
           </Grid>
         </Grid>
       </Grid>
@@ -192,11 +200,13 @@ export default function AboutUs(props) {
             direction="column"
             lg
             alignItems={matchesMD ? "center" : undefined}
-            style={{marginBottom:matchesMD ? "2.5em":0}}
+            style={{ marginBottom: matchesMD ? "2.5em" : 0 }}
           >
             <Grid item>
-              <img src="https://picsum.photos/200/300?random=2" alt="random" 
-              style={{maxWidth:matchesMD ? 300 : undefined}}
+              <img
+                src="https://picsum.photos/200/300?random=2"
+                alt="random"
+                style={{ maxWidth: matchesMD ? 300 : undefined }}
               />
             </Grid>
             <Grid item>
@@ -229,8 +239,11 @@ export default function AboutUs(props) {
             alignItems={matchesMD ? "center" : "flex-end"}
           >
             <Grid item>
-              <img src="https://picsum.photos/200/300?random=3" alt="random"
-               style={{maxWidth:matchesMD ? 300 : undefined}} />
+              <img
+                src="https://picsum.photos/200/300?random=3"
+                alt="random"
+                style={{ maxWidth: matchesMD ? 300 : undefined }}
+              />
             </Grid>
             <Grid item>
               <Typography variant="caption">

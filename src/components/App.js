@@ -1,16 +1,18 @@
-import React, { useState } from "react";
-import { ThemeProvider } from "@material-ui/styles";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import theme from "./ui/Theme";
-import Header from "./ui/Header";
-import Footer from "./ui/Footer";
-import LandingPage from "./LandingPage";
-import Services from "./Services";
-import CustomSoftware from "./CustomSoftware";
-import MobileApps from "./MobileApps";
-import Websites from "./Websites";
-import Revolution from "./Revolution";
-import AboutUs from "./AboutUs";
+import React, { useState } from 'react';
+import { ThemeProvider } from '@material-ui/styles';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import theme from './ui/Theme';
+import Header from './ui/Header';
+import Footer from './ui/Footer';
+import LandingPage from './LandingPage';
+import Services from './Services';
+import CustomSoftware from './CustomSoftware';
+import MobileApps from './MobileApps';
+import Websites from './Websites';
+import Revolution from './Revolution';
+import AboutUs from './AboutUs';
+import Contact from './Contact';
+import Estimate from './Estimate';
 
 function App() {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -90,8 +92,16 @@ function App() {
             path="/about"
             render={(props) => <AboutUs {...props} setValue={setValue} />}
           />
-          <Route exact path="/contact" component={() => <div>Contact</div>} />
-          <Route exact path="/estimate" component={() => <div>Estimate</div>} />
+          <Route
+            exact
+            path="/contact"
+            render={(props) => <Contact {...props} setValue={setValue} />}
+          />
+          <Route
+            exact
+            path="/estimate"
+            render={(props) => <Estimate {...props} setValue={setValue} />}
+          />
         </Switch>
         <Footer setValue={setValue} setSelectedIndex={setSelectedIndex} />
       </BrowserRouter>

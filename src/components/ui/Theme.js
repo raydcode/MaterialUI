@@ -47,6 +47,11 @@ export default createTheme({
       color: primaryColorVariant,
       fontWeight: 700,
     },
+    h6:{
+      fontWeight: 500,
+      fontFamily: "Raleway",
+      color:primaryColorVariant
+    },
     subtitle1: {
       fontSize: "1.25rem",
       fontWeight: 300,
@@ -73,4 +78,26 @@ export default createTheme({
       fontWeight: "bold",
     },
   },
+  overrides:{ 
+    MuiInputLabel:{ 
+       root:{
+          color:secondaryColorVariant,
+          fontSize:"1rem"
+       }
+    },
+    MuiInput:{ 
+       root:{ 
+         color:textgrey,
+         fontWeight:300
+       },
+       underline:{ 
+          "&:before":{
+             borderBottom:`2px solid ${secondaryColorVariant}`
+          },
+          "&:hover:not($disabled):not($focused):not($error):before":{
+            borderBottom:`2px solid ${secondaryColorVariant}`
+          }
+       }
+    }
+  }
 });
