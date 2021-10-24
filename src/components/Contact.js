@@ -265,7 +265,7 @@ export default function Contact(props) {
               item
               container
               direction="column"
-              style={{ maxWidth: "20em" }}
+              style={{ width: "20em" }}
             >
               <Grid item>
                 <Grid item style={{ marginBottom: "0.5em" }}>
@@ -301,7 +301,7 @@ export default function Contact(props) {
                 </Grid>
               </Grid>
             </Grid>
-            <Grid item style={{ maxWidth: "20em" }}>
+            <Grid item style={{ width: "20em" }}>
               <TextField
                 className={classes.message}
                 InputProps={{ disableUnderline: true }}
@@ -336,7 +336,7 @@ export default function Contact(props) {
       <Dialog
         style={{ zIndex: 1302 }}
         open={open}
-        fullScreen={matchesXS}
+        fullScreen={matchesSm}
         onClose={() => setOpen(false)}
         PaperProps={{
           style: {
@@ -399,12 +399,13 @@ export default function Contact(props) {
               />
             </Grid>
 
-            <Grid item style={{ maxWidth: matchesXS ? "100%" : "20em" }}>
+            <Grid item style={{ width: matchesSm ? "100%" : "20em" }}>
               <TextField
                 className={classes.message}
                 InputProps={{ disableUnderline: true }}
                 id="message"
                 multiline
+                placeholder="Tell us more about your project"
                 fullWidth
                 rows={10}
                 value={message}

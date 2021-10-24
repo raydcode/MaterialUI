@@ -13,6 +13,7 @@ import Revolution from './Revolution';
 import AboutUs from './AboutUs';
 import Contact from './Contact';
 import Estimate from './Estimate';
+import NotFound from './NotFound';
 
 function App() {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -100,7 +101,12 @@ function App() {
           <Route
             exact
             path="/estimate"
-            render={(props) => <Estimate {...props} setValue={setValue} />}
+            render={() => <Estimate  />}
+          />
+           <Route
+            exact
+            path="*"
+            render={() => <NotFound  />}
           />
         </Switch>
         <Footer setValue={setValue} setSelectedIndex={setSelectedIndex} />
